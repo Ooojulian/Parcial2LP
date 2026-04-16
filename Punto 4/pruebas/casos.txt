@@ -1,0 +1,12 @@
+# Casos de prueba — Punto 4
+# Formato: expresion|descripcion|esperado(PASS/FAIL)
+
+2|numero simple|PASS
+2 + 3|suma simple|PASS
+2 + 3 * 4|precedencia multiplicacion|PASS
+( 2 + 3 ) * 4|parentesis|PASS
+10 - 5 / 2|division|PASS
+( ( 2 + 3 ) * ( 4 - 1 ) ) / 3|expresion compleja|PASS
+2 +|incompleto|FAIL
+* 3|sin operando izquierdo|FAIL
+( 2 + 3|parentesis sin cerrar|FAIL

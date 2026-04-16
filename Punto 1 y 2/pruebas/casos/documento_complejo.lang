@@ -1,0 +1,10 @@
+INSERT INTO users {
+  "name": "Bob",
+  "profile": {
+    "email": "bob@example.com",
+    "verified": true
+  },
+  "tags": ["admin", "developer"]
+}
+INSERT INTO products {"sku": "SKU-001", "price": 99.99}
+UPDATE products SET {"stock": 50} WHERE "sku" = "SKU-001"

@@ -1,0 +1,8 @@
+# Casos de prueba — Punto 3
+# Formato: entrada|descripcion|esperado(ambigua)|esperado(desambigua)
+# esperado: PASS o FAIL
+
+i E t i E t s e s|if E then if E then S else S (caso principal)|PASS|PASS
+i E t s|if E then S (sin else)|PASS|PASS
+i E t s e s|if E then S else S (completo)|PASS|PASS
+i E t i E t i E t s e s|triple anidado|PASS|PASS

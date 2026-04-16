@@ -1,0 +1,45 @@
+// --- Símbolo Inicial ---
+S -> Stmt S 
+   | Stmt
+
+// --- Operaciones Principales (CRUD) ---
+Stmt -> CreateStmt 
+      | ReadStmt 
+      | UpdateStmt 
+      | DeleteStmt
+
+CreateStmt -> "INSERT" "INTO" id Doc
+ReadStmt   -> "FIND" "FROM" id OptFilter
+UpdateStmt -> "UPDATE" id "SET" Doc OptFilter
+DeleteStmt -> "DELETE" "FROM" id OptFilter
+
+// --- Filtros y Condiciones ---
+OptFilter -> "WHERE" Condition 
+           | /* epsilon (vacío) */
+
+Condition -> string Operator Value
+
+Operator -> "=" 
+          | "<" 
+          | ">"
+
+// --- Estructura de Datos Recursiva (JSON/BSON) ---
+Doc -> "{" Members "}" 
+     | "{" "}"
+
+Members -> Pair "," Members 
+         | Pair
+
+Pair -> string ":" Value
+
+Value -> string 
+       | number 
+       | boolean 
+       | Doc 
+       | Array
+
+Array -> "[" Elements "]" 
+       | "[" "]"
+
+Elements -> Value "," Elements 
+          | Value

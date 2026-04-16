@@ -1,0 +1,1 @@
+FIND FROM users WHERE "status" = "active"

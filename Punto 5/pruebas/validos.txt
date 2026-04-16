@@ -1,0 +1,8 @@
+x = 5
+x = 5 + 3
+if (a > b) then x = 10
+if (a > b) then x = 10 else y = 20
+x = ( 2 + 3 ) * 4
+if (x == 0) then y = 1 else y = x + 1
+x = 5 ; y = 10
+if (a >= b) then x = 1 else if (a < b) then x = 2 else x = 3

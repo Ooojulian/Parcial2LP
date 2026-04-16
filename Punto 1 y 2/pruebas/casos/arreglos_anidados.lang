@@ -1,0 +1,2 @@
+INSERT INTO matrix {"data": [1, 2, 3], "nested": {"values": [true, false, true]}}
+FIND FROM matrix WHERE "count" > "5"
